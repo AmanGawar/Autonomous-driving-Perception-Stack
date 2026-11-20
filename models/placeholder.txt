@@ -1,0 +1,6 @@
+Place your fine-tuned weights here:
+- yolov8m_bdd100k.pt
+- yolov8m_bdd100k.onnx
+- yolov8m_bdd100k_fp16.engine
+- midas_small.onnx
+- midas_small_fp16.engine
