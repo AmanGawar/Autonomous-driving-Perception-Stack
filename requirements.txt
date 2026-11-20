@@ -1,0 +1,17 @@
+# Autonomous Driving Perception Stack - Core Dependencies
+torch>=2.1.0
+torchvision>=0.16.0
+ultralytics>=8.0.200
+opencv-python>=4.8.0
+numpy>=1.24.0,<2.0.0
+scipy>=1.11.0
+onnx>=1.14.0
+onnxruntime-gpu>=1.16.0
+wandb>=0.16.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+pytest>=7.4.0
+
+# ROS2 & CARLA Bridge
+# Note: CARLA Python API requires matching wheel (e.g., carla-0.9.13-cp38-cp38-linux_x86_64.whl)
+# ROS2 Humble/Iron packages are managed via system apt / rosdep
