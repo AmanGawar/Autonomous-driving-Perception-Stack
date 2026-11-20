@@ -1,0 +1,31 @@
+perception_pipeline:
+  ros__parameters:
+    camera_topic: "/carla/ego_vehicle/camera/rgb_front/image_raw"
+    camera_frame_id: "camera_front"
+    detection_topic: "/perception/detections"
+    tracking_topic: "/perception/tracked_objects"
+    lane_topic: "/perception/lane_boundaries"
+    depth_topic: "/perception/depth_map"
+    safety_topic: "/safety/collision_alert"
+    vehicle_cmd_topic: "/carla/ego_vehicle/vehicle_control_cmd"
+
+    # YOLO Detector
+    conf_threshold: 0.40
+    iou_threshold: 0.45
+    model_path: "models/yolov8m_bdd100k.onnx"
+    input_resolution: [640, 640]
+    device: "cuda"
+
+    # ByteTrack
+    track_thresh: 0.50
+    match_thresh: 0.80
+    track_buffer: 30
+
+    # Lane Detection
+    lane_width_nominal_m: 3.7
+    camera_height_m: 1.65
+    focal_length_px: 920.0
+
+    # Collision Warning
+    caution_ttc_threshold_s: 3.2
+    critical_ttc_threshold_s: 1.8
